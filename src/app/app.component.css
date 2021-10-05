@@ -1,0 +1,17 @@
+.mat-progress-spinner {
+  float: left;
+  top: 6px;
+}
+
+table.games {
+  width: 100%;
+}
+
+
+table.games td:last-of-type {
+  width: 80px;
+}
+
+mat-icon.editors-choice {
+  color: gold;
+}

@@ -1,0 +1,11 @@
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Search for a game title</mat-label>
+    <input type="text" matInput [formControl]="formTitle" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="gameOptionSelected($event)">
+      <mat-option *ngFor="let game of filteredGames$ | async" [value]="game">
+        {{game.title}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
